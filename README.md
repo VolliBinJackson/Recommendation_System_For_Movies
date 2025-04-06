@@ -21,3 +21,11 @@ movies.csv: Contains user reviews. Each line represents a rating from a user abo
 
 movies.csv: Contains the metadata of the movies (Movie ID, Movie Title, Genre).
 
+# Goal of the Project 
+
+The goal of this project is to develop a recommendation model that suggests movies for a user based on their ratings and the reviews of similar users. The main approach we use is collaborative filtering. We implement both user-assisted and item-based collaborative filtering. Approaches and methods The system uses two main approaches to collaborative filtering: 
+
+- User-assisted collaborative filtering: This approach is based on the assumption that similar users like similar movies. Similarities between users are calculated, and recommendations are made based on that. Similarity between users is measured using metrics such as cosine similarity.
+- Item-based collaborative filtering: This approach assumes that movies that have been highly rated by similar users might also appeal to a specific user.
+
+Both approaches get combined and it becomes a hybrid model, which we use for our webserver.
