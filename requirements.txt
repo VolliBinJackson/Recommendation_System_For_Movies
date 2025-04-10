@@ -1,0 +1,8 @@
+To run this, you will need:
+
+- python 3.x
+- pip install pandas
+- pip install scikit-learn (for Machine Learning algoritms like k-NN)
+- pip install numpy
+
+you can install these libraries (excluding python) in your terminal.
