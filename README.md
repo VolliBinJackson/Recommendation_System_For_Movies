@@ -44,11 +44,10 @@ To build a working recommendation system that:
 
 1. Clone the repo and navigate into the project folder
 2. create venv (recommended):
-3. python -m venv .venv
-4. .venv\Scripts\activate # on Windows
-5. source .venv/bin/activate # on Linux/Mac
+  - python -m venv .venv
+  - .venv\Scripts\activate # on Windows
+  - source .venv/bin/activate # on Linux/Mac
 
-6. Install dependencies: pip install -r requirements.txt
-
-7. Navigate to app folder, then run the webserver: cd app    streamlit run main.py    
+3. Install dependencies: pip install -r requirements.txt
+4. Navigate to app folder, then run the webserver: cd app    streamlit run main.py    
 
