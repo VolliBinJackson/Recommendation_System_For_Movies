@@ -13,10 +13,10 @@ def recommend_collaborative(user_id):
     if not user_id in user_movie_ratings:
         return "User does not exist."
 
-    # Finden der k-nächsten Nachbarn (d.h. ähnlichste Benutzer)
+    # finding the k-next neighbors (i.e. similar users)
     distances, indices = model.kneighbors(user_movie_ratings.loc[user_id].values.reshape(1, -1))
 
-    # Hole die Filme, die diese ähnlichen Benutzer gesehen haben
+    # fetch movies the similar users have watched
     recommended_movie_ids = user_movie_ratings.columns[indices.flatten()]
     recommended_movies = movies[movies['movieId'].isin(recommended_movie_ids)]['title']
     return recommended_movies
