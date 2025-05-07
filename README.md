@@ -51,5 +51,7 @@ To build a working recommendation system that:
   - pip install -r requirements.txt
 4. Navigate to app folder, then run the webserver:
   - cd app
-  - streamlit run main.py    
+  - streamlit run main.py  (Note: It may take a while for the web server to appear)
+
+If you want to stop the process, enter ^c in Terminal, then close the app window.
 
