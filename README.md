@@ -1,31 +1,56 @@
 # Recommendation_System_For_Movies
 
-This is my own project to learn, practice and get familiar with Machine Learning, Unit Testing and hosting. 
+This is my personal project to learn, practice and get familiar with Machine Learning, Unit Testing and web deployment. 
 
 # Overview
 
-This project includes a film recommendation system that works with modern methods of collaborative filtering to generate personalized recommendations for films. Recommendations are based on users' ratings and preferences, and the model uses historical interactions to identify patterns and make predictions. This system could be used on a platform such as Netflix, Amazon Prime, or a similar service to suggest relevant movies to users.
-
-The system uses the popular MovieLens dataset and is a simple but effective example of applying machine learning to recommender systems.
+This project implements a movie recommendation system using a **hybrid approach** that combines **Collaborative Filtering** and **Content-Based Filtering** to generate personalized suggestions. 
 
 # Dataset
 
-The dataset I used is the MovieLens dataset, which contains a collection of ratings and metadata about movies. It is widely used in research to develop and test recommendation algorithms.
-
-Here is the link: https://grouplens.org/datasets/movielens/latest/ 
+It leverages the popular MovieLens dataset (https://grouplens.org/datasets/movielens/latest/) and simulates a recommender engine similar to those used by platforms like Netflix or Amazon Prime. It is widely used in research to develop and test recommendation algorithms.
 
 This project used the MovieLens 100k dataset, which contains over 100,000 reviews from users on movies.
 
 Important files in the dataset:
-movies.csv: Contains user reviews. Each line represents a rating from a user about a movie (User ID, Movie ID, Rating, Timestamp).
+- ratings.csv: Contains user reviews. Each line represents a rating from a user about a movie (User ID, Movie ID, Rating, Timestamp).
+- movies.csv: Contains the metadata of the movies (Movie ID, Movie Title, Genre).
 
-movies.csv: Contains the metadata of the movies (Movie ID, Movie Title, Genre).
+
+# Methods Used
+
+The recommendation engine combines the strengths of both filtering techniques:
+
+Collaborative Filtering
+- **User-Based Collaborative Filtering**: Assumes users with similar rating patterns will enjoy similar movies. User similarity is calculated using cosine similarity.
+- **Item-Based Collaborative Filtering**: Assumes that if a user liked movie A, they might also like movie B, based on ratings from other users.
+
+Content-Based Filtering
+- Focuses on the **attributes of the movies themselves** (e.g., genre, title).
+- The system computes **cosine similarity** between movies based on genre metadata and suggests similar items.
+- This is especially useful for new users (cold start) or when historical user data is sparse.
+
+The final **hybrid model** combines both approaches for improved accuracy.
 
 # Goal of the Project 
 
-The goal of this project is to develop a recommendation model that suggests movies for a user based on their ratings and the reviews of similar users. The main approach we use is collaborative filtering. We implement both user-assisted and item-based collaborative filtering. Approaches and methods The system uses two main approaches to collaborative filtering: 
+To build a working recommendation system that:
+- Suggests movies based on user preferences
+- Combines collaborative filtering and content similarity
+- Runs as an interactive web app using Streamlit
+- Includes basic unit tests for core components
 
-- User-assisted collaborative filtering: This approach is based on the assumption that similar users like similar movies. Similarities between users are calculated, and recommendations are made based on that. Similarity between users is measured using metrics such as cosine similarity.
-- Item-based collaborative filtering: This approach assumes that movies that have been highly rated by similar users might also appeal to a specific user.
+# Running the Project
 
-Both approaches get combined and it becomes a hybrid model, which we use for our webserver.
+1. Clone the repo:  git clone <repo-link>
+                    cd Recommendation_System_For_Movies
+
+2. create venv (recommended): python -m venv .venv
+                              .venv\Scripts\activate # on Windows
+                              source .venv/bin/activate # on Linux/Mac
+
+3. Install dependencies:  pip install -r requirements.txt
+
+4. Run the webserver: cd app
+                      streamlit run main.py    
+
