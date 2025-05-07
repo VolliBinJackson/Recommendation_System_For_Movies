@@ -55,3 +55,4 @@ To build a working recommendation system that:
 
 If you want to stop the process, enter ^c in Terminal, then close the app window.
 
+You may compare the contents on the web server (e.g. the UserID's or MovieID's) with the MovieLens dataset in the folder, if you want to understand the output more. 
