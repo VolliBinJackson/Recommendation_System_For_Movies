@@ -47,7 +47,9 @@ To build a working recommendation system that:
   - python -m venv .venv
   - .venv\Scripts\activate # on Windows
   - source .venv/bin/activate # on Linux/Mac
-
-3. Install dependencies: pip install -r requirements.txt
-4. Navigate to app folder, then run the webserver: cd app    streamlit run main.py    
+3. Install dependencies:
+  - pip install -r requirements.txt
+4. Navigate to app folder, then run the webserver:
+  - cd app
+  - streamlit run main.py    
 
