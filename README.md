@@ -42,19 +42,13 @@ To build a working recommendation system that:
 
 # Running the Project
 
-1. Clone the repo:  
-git clone <repo-link>
-cd Recommendation_System_For_Movies
-
+1. Clone the repo and navigate into the project folder
 2. create venv (recommended):
-python -m venv .venv
-.venv\Scripts\activate # on Windows
-source .venv/bin/activate # on Linux/Mac
+3. python -m venv .venv
+4. .venv\Scripts\activate # on Windows
+5. source .venv/bin/activate # on Linux/Mac
 
-3. Install dependencies:
-pip install -r requirements.txt
+6. Install dependencies: pip install -r requirements.txt
 
-4. Run the webserver:
-cd app
-streamlit run main.py    
+7. Navigate to app folder, then run the webserver: cd app    streamlit run main.py    
 
